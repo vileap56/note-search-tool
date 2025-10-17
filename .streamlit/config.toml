@@ -1,0 +1,44 @@
+[server]
+headless = true
+port = 8501
+
+[runner]
+magicEnabled = true
+```
+
+4. **もう1つファイルを作成**
+   - 「Add file」→「Create new file」  
+   - ファイル名: `runtime.txt`
+   
+5. **以下の内容を記述**:
+```
+python-3.11
+```
+
+6. **Commit changes**
+
+7. **Streamlit Cloudでアプリを再起動**
+   - ダッシュボードに戻る
+   - アプリの「⋮」→「Reboot app」
+
+### 解決策2: requirements.txtを更新
+
+より具体的なバージョンを指定します。
+
+#### GitHubで`requirements.txt`を編集：
+```
+streamlit==1.40.0
+requests==2.31.0
+pandas==2.1.4
+```
+
+### 解決策3: しばらく待つ
+
+ログを見ると正常に進んでいるようにも見えます。パッケージのダウンロードに時間がかかっている可能性があります。
+
+**あと5分待ってみてください。**
+
+その後ログに以下のような表示が出れば成功です：
+```
+✅ Installed dependencies!
+🚀 Starting app...
